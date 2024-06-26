@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayotni yengillashtir 😉</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #526D82;
+            cursor: default;
+        }
+        #menu{
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 99vw;
+            height: 12vh;
+            background-color: #27374D;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            .betlar{
+                color: #BBE1FA;
+                margin-top: 3vh;
+                font-size: 1.6rem;
+                text-align: center;
+                flex: 1;
+            }
+            .hisob{
+                color: #BBE1FA;
+                margin-top: 3vh;
+                font-size: 1.6rem;
+                text-align: center;
+                flex: 1;
+            }
+            .Test{
+                color: #BBE1FA;
+                margin-top: 3vh;
+                font-size: 1.6rem;
+                text-align: center;
+                flex: 1;
+            }
+        }
+        #containerBetlar{
+            width: 97vw;
+            margin-top: 12vh;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+
+            .betSoni{
+                width: 70vw;
+                background-color: #BBE1FA;
+                padding: 10px;
+                margin-left: 15vw;
+                margin-top: 2vh;
+                border-radius: 10px;
+                color: #27374D;
+            }
+        }
+        #hisobSaxifasi{
+            width: 100vw;
+            margin-top: 12vh;
+            padding-top: 15px;
+            display: none;
+            .test{
+                width: 60vw;
+                color: #DDE6ED;
+                margin-left: 20vw;
+                margin-top: 10px;
+                padding: 15px;
+                text-align: center;
+                border-radius: 10px;
+                background-color: #5a90b6;
+            }
+        }
+        #testArea{
+            width: 100vw;
+            margin-top: 12vh;
+            padding-top: 15px;
+            display: none;
+            .containerQuestion{
+                width: 95vw;
+                margin-left: 2.5vw;
+                text-align: center;
+                .question{
+                    border-radius: 5px;
+                    background-color: aqua;
+                    padding: 10px;
+                    font-size: 1.7rem;
+                }
+                .varient{
+                    padding: 40px;
+                    .vari{
+                        margin-top: 5vh;
+                        padding: 5vh;
+                        font-size: 1.2rem;
+                        background-color: #BBE1FA;
+                        border-radius: 5px;
+                    }
+                }
+                .natijalar{
+                    font-size: 1.2rem;
+                    color: azure;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    
+<div id="menu">
+    <div class="betlar" onclick="saxifa(1)">Betlar</div>
+    <div class="hisob" onclick="saxifa(2)">Hisob</div>
+    <div class="Test" onclick="saxifa(3)">Test</div>
+</div>
+
+<div id="containerBetlar">
+    <div class="betSoni" onclick="bet(49)">500 talik so'zlarni  <br> birinchi unitni 62 tasi</div>
+
+    <div class="betSoni" onclick="bet(1)">1 - bet</div>
+    <div class="betSoni" onclick="bet(2)">2 - bet</div>
+    <div class="betSoni" onclick="bet(3)">3 - bet</div>
+    <div class="betSoni" onclick="bet(4)">4 - bet</div>
+    <div class="betSoni" onclick="bet(5)">5 - bet</div>
+    <div class="betSoni" onclick="bet(6)">6 - bet</div>
+    <div class="betSoni" onclick="bet(7)">7 - bet</div>
+    <div class="betSoni" onclick="bet(8)">8 - bet</div>
+    <div class="betSoni" onclick="bet(9)">9 - bet</div>
+    <div class="betSoni" onclick="bet(10)">10 - bet</div>
+    <div class="betSoni" onclick="bet(11)">11 - bet</div>
+    <div class="betSoni" onclick="bet(12)">12 - bet</div>
+    <div class="betSoni" onclick="bet(13)">13 - bet</div>
+    <div class="betSoni" onclick="bet(14)">15 - bet</div>
+    <div class="betSoni" onclick="bet(15)">16 - bet</div>
+    <div class="betSoni" onclick="bet(16)">17 - bet</div>
+    <div class="betSoni" onclick="bet(17)">18 - bet</div>
+    <div class="betSoni" onclick="bet(18)">19 - bet</div>
+    <div class="betSoni" onclick="bet(19)">20 - bet</div>
+    <div class="betSoni" onclick="bet(20)">22 - bet</div>
+    <div class="betSoni" onclick="bet(21)">23 - bet</div>
+    <div class="betSoni" onclick="bet(22)">25 - bet</div>
+    <div class="betSoni" onclick="bet(23)">27 - bet</div>
+    <div class="betSoni" onclick="bet(24)">28 - bet</div>
+    <div class="betSoni" onclick="bet(25)">29 - bet</div>
+    <div class="betSoni" onclick="bet(26)">30 - bet</div>
+    <div class="betSoni" onclick="bet(27)">31 - bet</div>
+    <div class="betSoni" onclick="bet(28)">32 - bet</div>
+    <div class="betSoni" onclick="bet(29)">33 - bet</div>
+    <div class="betSoni" onclick="bet(30)">34 - bet</div>
+    <div class="betSoni" onclick="bet(31)">35 - bet</div>
+    <div class="betSoni" onclick="bet(32)">36 - bet</div>
+    <div class="betSoni" onclick="bet(33)">38 - bet</div>
+    <div class="betSoni" onclick="bet(34)">40 - bet</div>
+    <div class="betSoni" onclick="bet(35)">41 - bet</div>
+    <div class="betSoni" onclick="bet(36)">42 - bet</div>
+    <div class="betSoni" onclick="bet(37)">45 - bet</div>
+    <div class="betSoni" onclick="bet(38)">46 - bet</div>
+    <div class="betSoni" onclick="bet(39)">47 - bet</div>
+    <div class="betSoni" onclick="bet(40)">49 - bet</div>
+    <div class="betSoni" onclick="bet(41)">50 - bet</div>
+    <div class="betSoni" onclick="bet(42)">51 - bet</div>
+    <div class="betSoni" onclick="bet(43)">52 - bet</div>
+    <div class="betSoni" onclick="bet(44)">53 - bet</div>
+    <div class="betSoni" onclick="bet(45)">54 - bet</div>
+    <div class="betSoni" onclick="bet(46)">56 - bet</div>
+    <div class="betSoni" onclick="bet(47)">58 - bet</div>
+    <div class="betSoni" onclick="bet(48)">59 - bet</div>
+
+</div>
+
+<div id="hisobSaxifasi">
+<!--     <div class="test">
+        <div class="bet">bet: 1</div>
+        <div class="atempts">urinishlar: 20</div>
+        <div class="right">to'g'rilari: 20</div>
+    </div> -->
+</div>
+
+<div id="testArea">
+    <div class="containerQuestion">
+        <div class="question">A great deal of</div>
+
+        <div class="varient" id="varient">
+            <div class="vari" onclick="vari(1)">A) a lot of</div>
+            <div class="vari" onclick="vari(2)">B) a lot of</div>
+            <div class="vari" onclick="vari(3)">C) a lot of</div>
+        </div>
+        <div class="natijalar">
+            urunish: 
+            <br>
+            to'g'ri: 
+        </div>
+    </div>
+</div>
+
+    <script>
+let betSuzlari = [
+/* 1: */ [
+"annual = yearly = per year",
+"a rise = an increase = a growth.",
+"a decrease = a fall = a drop = a decline = a reduction",
+"already = not new",
+"a pair of = two",
+"allow = enable",
+"avoid = keep safe from",
+"all = every",
+"a great deal of = a lot of",
+"according to = depending on",
+"areas = parts",
+"affect = impact",
+"anticipate = foreshadow",
+"aid = help",
+"audience = viewer",
+"abnormal = unusual",
+"actor = performer",
+],
+/* 2: */ [
+"attack = assault",
+"appearance = physiognomy",
+"amusing = funny = humorous",
+"aspects of life = existence",
+"alone = solely",
+"anxiety = fear",
+"assist their learning = improve their learning efficiency",
+"a considerable amount = a great deal = a lot",
+"a strong connection = a very close relationship",
+"assistant = apprentice",
+"autumn (British English) = fall (American English)",
+"abandoned = derelict",
+"a prevailing wind = against the wind",
+"average = normal",
+"animals = livestock",
+"accidentally = only by chance",
+"agencies = jurisdictions",
+"a (wide) variety of = a range of",
+"accept = tolerate",
+"actively notice = pay attention to",
+"a sense of duty = moral obligation",
+],
+/* 3: */ [
+"ancient creatures = fossils",
+"a global team = an international working party",
+"at risk = vulnerable",
+"auditory problems = hearing loss",
+"achievement = success",
+"a psychological illness = a mental disorder",
+"affect = influence",
+"aggressive behavior = frustration and anger",
+"average-sized = medium-sized",
+"agree on = concur on",
+"alter = change",
+"a century = 100 years",
+"associated with = relationship",
+"achievement = attainment",
+"admit = acknowledge",
+"attempt = effort",
+"affect the environment= ruin the environment.",
+"a sharp decrease = a crash = a sudden serious fall in the price or value of something",
+"allow = grant permission",
+"aggressive = assertive = pushy",
+],
+/* 4: */ [
+"aid = help = assist",
+"at the same time = at a time",
+"a few = a handful of",
+"achievable = realistic",
+"associated with = closely related to",
+"a similar way to = like",
+"ambitious = aspiring",
+"antagonize = provoke = embitter",
+"after = following = next",
+"afraid = frightened = scared",
+"always = forever",
+"apparent = obvious = evident",
+"accompanied by = together with",
+"ability = skill = aptitude",
+"accurate = correct = right",
+"awful = dreadful",
+"awkward = clumsy = uncoordinated",
+"approve = accept = ratify = endorse",
+"arrive = reach = come",
+"above = overhead",
+"allow = permit",
+],
+/* 5: */ [
+"achieve = accomplish = attain",
+"artificial = fake = synthetic = false",
+"amazing = fantastic = astonishing = extraordinary = incredible = fabulous = wonderful",
+"angry = mad = furious",
+"active = energetic = animated = lively",
+"adequate = sufficient = enough = ample",
+"ask = question = inquire",
+"adjourn = postpone = recess",
+"active = energetic",
+"answer = reply = respond",
+"ask = question = request = inquire = query = examine.",
+"adult = grown-up",
+"average = ordinary = fair",
+"attraction = spectacular",
+"advocate = support = recommend",
+"arrogant = haughty",
+"after = behind",
+"awful = dreadful = terrible = bad = unpleasant",
+],
+/* 6: */ [
+"businesses = companies",
+"beneath = under",
+"brief = short = concise",
+"broad = wide = expansive",
+"beautiful = gorgeous = graceful = elegant = pretty = lovely = attractive",
+"begin = start = open = initiate = commence",
+"based on = modelled on",
+"brave = courageous = fearless",
+"by = via",
+"busy = occupied",
+"build = construct",
+"big = enormous = huge = gigantic = vast = large = great.",
+"bright = intelligent = knowing = quick-witted = smart = shining = shiny = brilliant",
+"buy = purchase",
+"best = finest",
+"blend = combine = mix",
+"be put together = be composed",
+"be allowed = be entitled",
+"beautiful (view) = breathtaking = wonderful = picturesque",
+],
+/* 7: */ [
+"beautiful (person) = attractive = gorgeous = good-looking",
+"base = foundation",
+"brave = courageous",
+"be predicted to = be expected to",
+"be impossible = cannot",
+"building = construction",
+"before = prior",
+"because = since",
+"be given priority = preferential",
+"believe = trust = accept",
+"be successful =to prosper = be fortunate",
+"barren = unproductive = infertile",
+"below = under = lower",
+"beneficial = helpful = useful = advantageous",
+"become troublesome = interfere with",
+"before = prior to",
+"brain = mind",
+"be able = be capable = be qualified",
+"ban = prohibit = forbid",
+"before = prior = earlier",
+"beginning = start = initiate",
+],
+/* 8: */ [
+"be raised = be lifted",
+"become aware of = realize",
+"boundaries = frontiers",
+"body language = gestures",
+"beautiful = pretty = attractive = lovely",
+"bloom = flourish",
+"bones = remains",
+"beyond the point where land is visible = out of sight of land",
+"birds in temperate climates = temperate-zone birds",
+"build = construct",
+],
+/* 9: */ [
+"located = situated",
+"consumption = use",
+"cut = reduce",
+"cities = urban",
+"crops = plants which are grown for food",
+"components = parts",
+"conscientious = careful",
+"common = generally",
+"create = form",
+"change the direction of = re-route",
+"cannot be replaced = no substitute for",
+"complexity = intricacy",
+"currently = in more recent decades",
+"categories = types",
+"create = build",
+"consistent with = fit",
+"charging = pricing",
+"commitment to = engagement",
+"colleague = peer",
+"charming = delightful = appealing = enchanting",
+],
+/* 10: */ [
+"chilly = cool",
+"conditions = factors",
+"copy = reproduction",
+"colours = hues",
+"certain = sure = definite",
+"capture = seize = arrest",
+"consulted = asked advice",
+"collect = accumulate",
+"contribute to = lead to",
+"care = concern = protection",
+"careful = cautious = watchful",
+"cold = freezing",
+"comprehend = understand",
+"confuse = misinterpret",
+"coincidental = fortuitous",
+"civil = municipal",
+"close = shut = fasten",
+"close = near",
+"conclude = draw a conclusion",
+"change = shift",
+"calm = quiet = tranquil",
+],
+/* 11: */ [
+"complete = finish",
+"complex = complicated",
+"cooperation = support and understanding",
+"construction = building",
+"city life = urban lifestyles",
+"complex = complicated = intricate",
+"competent = capable = qualified",
+"collect information = establish a databank",
+"catastrophic = devastating",
+"compress = condense = squeeze",
+"concrete = solid",
+"concur = agree",
+"conflict = oppose = differ",
+"consecutive = successive = continuous",
+"conservative = cautious = restrained",
+"conscientious = scrupulous = virtuous",
+"careless = reckless",
+"conflict = fight = battle = struggle",
+"cease = stop = discontinue",
+"courageous = brave",
+"carefully = meticulously",
+],
+/* 12: */ [
+"channel their feelings = emotional forces in harness",
+"cemetery = burial ground",
+"current teaching methods = modern teaching practices",
+"characteristics = traits",
+"citizens = residents",
+"cognitive = perceptual",
+"cut down on = reduce",
+"categories = types",
+"city = metropolitan",
+"conserving energy = sparing use of energy reserves",
+"comply with = obey",
+"cheerful = optimistic",
+"cheap = worthless",
+"courageous = brave = heroic",
+"cowardly = fearful",
+"contributed to = made a contribution to",
+"charging = pricing",
+"contaminate = pollute",
+"contented = satisfied = pleased",
+"comparatively = relatively",
+"come = approach = arrive = reach",
+],
+/* 13: */ [
+"cool = chilly = cold = frosty = frigid",
+"conform = comply",
+"conceal = hide",
+"cozy = comfortable",
+"congested = overcrowded = stuffed",
+"continue = persist = persevere",
+"clarify = explain = simplify",
+"connect = join = link = attach",
+"conscious = aware",
+"courteous = polite",
+"considerate = thoughtful",
+"constantly = always = continually",
+"convenient = handy",
+"conventional = customary = traditional",
+"correct = accurate = right",
+"cry = shout = yell = scream",
+"cut = chop = reduce",
+"crazy = insane = mad",
+"cruel = heartless",
+"careless = negligent",
+"chatting on the internet = chatting online",
+"criminals = people who commit a crime",
+],
+/* 15: */ [
+"distance = transportation",
+"disadvantage = drawback",
+"directly = straight",
+"decline = downfall",
+"dull = banal",
+"dominant = overbearing",
+"death rate = mortality rate",
+"domestic = home",
+"define = distinguish",
+"dense = tight",
+"direction = regulation",
+"difficult situations= challenging activities",
+"disobey = resist",
+"discovered = explored",
+"damage = harm = injure",
+"divided = split",
+"dissuade = deter",
+"disputes = disagreement",
+"difficulties = challenges",
+"depart = leave",
+],
+/* 16: */ [
+"disaster = accident",
+"do not have = lack",
+"domestic = connected with the home or family",
+"difficulty in recognizing = hidden or obscured",
+"drop = discard",
+"different = unrelated",
+"discoveries = breakthroughs",
+"distinctive = different",
+"dreadful = terrible = unpleasant",
+"dull = blunt",
+"depart = leave = exit",
+"deposit = place",
+"devised = formulated",
+"detecting = locating",
+"dumb = stupid",
+"documentation = written accounts",
+"domestic =in homes",
+"dark = black",
+"doubt = mistrust",
+"dawn = sunrise",
+"dense = thick = heavy = compressed",
+],
+/* 17: */ [
+"due primarily to = mainly because of",
+"depend (mainly) on = rely (heavily) on",
+"disclose = eliminate the secrecy",
+"declined by 50% = halved",
+"destroy = ruin",
+"dangerous = hazardous = risky = unsafe",
+"dark = shadowy = dim = dusky = black",
+"different = distinct = unlike",
+"documented evidence = data incidence = scale",
+"decreasing = decline",
+"doubt = distrust",
+"doubtful = vague",
+"decay = rot = spoil",
+"delicate = fragile",
+"disagree = differ = dispute",
+"dispute = debate = oppose",
+"demolish = destroy",
+"delightful = charming = lovely",
+"dissatisfied = unhappy",
+"discontinue = stop",
+"dull = boring = tiring = tiresome = uninteresting = tedious = monotonous",
+],
+/* 18: */ [
+"different = varied",
+"damage = hurt = impair = harm",
+"dangerous = unsafe = hazardous",
+"deduct = subtract",
+"defend = protect",
+"detest = dislike = hate",
+"divide = separate = split",
+"docile = tame = gentle",
+"difficult = hard = challenging",
+"diverse = different = distinct",
+"dirty = messy",
+"destroy = demolish",
+"dishonest = untrustworthy",
+"dull = uneducated",
+"destroy = ruin = demolish",
+"disagreement = contrast = incompatibility",
+"different functions = various features",
+],
+/* 19: */ [
+"estimate = predict",
+"ecozones = areas where there is a natural community of plants and animals",
+"encourage = stimulate",
+"emotions = feelings",
+"experts = biologists",
+"enormous = immense",
+"eyesight = vision",
+"effect = impact",
+"economic significance = economic impact",
+"evidence = clue",
+"experiments = studies",
+"evidence = indication",
+"environmental = ecological",
+"extremely high = impressive",
+"each person = each individual",
+"external = outer",
+"extended = longer",
+"efficiently = in the quickest way",
+"extend = prolonging",
+"encourage = promote = support = urge",
+],
+/* 20: */ [
+"enemy = opponent = ally",
+"effective = works well",
+"effects = consequences",
+"entirely = wholly",
+"evident = apparent = obvious = clear",
+"expenditure on = spent on",
+"each year = annual",
+"established = founded = started or created an organization, a system, etc.",
+"express large numbers = deal with large numbers",
+"establish targets = setting goals",
+"enjoy = like",
+"enlarge = expand = magnify",
+"earnings = pay = remuneration",
+"enormous = vast = immense",
+"early part of the process = early phases of development",
+"expected = predicted",
+"expensive = pricey = costly = dear",
+"exaggerate their claims = overstate their arguments",
+"examine = analyse",
+"excited = turbulent",
+"early = soon = premature",
+"easy = simple",
+"evil = bad = wrong = wicked",
+"excite = arouse = provoke = incite",
+"exterior = outside = outer",
+"effortless = easy",
+"energetic = lively",
+"end = stop = finish = terminate = conclude = close = halt = cessation",
+"explain = clarify = define = interpret = justify",
+],
+/* 22: */ [
+"fertilisers = artificial chemicals added to the land to make crops grow bigger or more quickly",
+"fresh = new",
+"fear = be afraid",
+"false = incorrect",
+"fast = rapid = quick = swift",
+"food production = food chain = food supply",
+"feel = experience",
+"fix = mend = repair",
+"fluid = liquid",
+"fixed = determined",
+"failed to overcome = made it impossible",
+"farming = agriculture",
+"fertile = productive",
+"free = release",
+"first = beginning",
+"first stage = initial stage",
+"faults = flaws",
+"features = characteristics",
+"feelings = emotional responses",
+],
+/* 23: */ [
+"format = pattern",
+"former = previous = earlier",
+"fraction = part = portion = segment",
+"fat = chubby",
+"fatal = deadly = mortal",
+"feedback = comments",
+"frivolous = trivial = unimportant",
+"full = packed = stuffed",
+"forbid = prohibit = ban",
+"forgive = pardon = excuse",
+"focus on = emphasize",
+"finish = end",
+"feasible = possible = attainable = practical",
+"fabulous = marvelous = amazing",
+"ferocious = fierce = savage",
+"fertile = fruitful = productive",
+"famous = well-known = renowned = famed = eminent.",
+"fear = fright = dread = scare = panic.",
+"face = confront = meet",
+"fair = impartial",
+"fresh = unused = new",
+"frigid = freezing = frosty",
+"furious = angry = enraged = infuriated",
+"future = tomorrow",
+"fixed = immobile",
+"failing = unsuccessful",
+"filled = occupied",
+"firm = steady",
+"false = fake = fraudulent = counterfeit",
+],
+/* 25: */ [
+"goal = imperative",
+"grow = rise",
+"goals = the highest levels of expertise",
+"grades = results",
+"generous = giving = big-hearted",
+"genuine = real = authentic = sincere",
+"good = nice = fine = well-behaved",
+"great = outstanding = remarkable",
+"give their opinions = express their views",
+"good things = positive things",
+"give = donate = present = offer",
+"go around = orbit",
+"gain = acquire = obtain = receive",
+"gather = collect = accumulate = compile",
+"glad = happy = pleased = delighted",
+"glorious = splendid = magnificent = superb",
+"gentle = tender = mild",
+"gratitude = thankfulness = appreciation",
+"good luck = fortune",
+"go = move = travel",
+"good = excellent = fine = wonderful = helpful.",
+],
+/* 27: */ [
+"have a major impact on = transformed",
+"halt = call it quits",
+"happiness = joy",
+"happen = come about",
+"have not been diagnosed = undiagnosed",
+"hard work = effort",
+"how paper is recycled = the process of paper recycling",
+"humble = modest",
+"harsh = strict",
+"how to produce = the process of producing",
+"higher corresponds to threefold = three times as much/ triple",
+"high noise level = loud noise",
+"help = have a positive effect on",
+"heat = temperature",
+"hide = conceal",
+"happy = content",
+"humiliate = embarrass",
+"handy = useful = convenient",
+"hard = firm = solid",
+"honest = truthful = sincere = frank",
+],
+/* 28: */ [
+"hospitable = welcoming = gracious",
+"hostile = aggressive",
+"huge = vast = immense = great",
+"hide = conceal",
+"high = tall",
+"harsh = rough",
+"happy = joyful = cheerful = glad = overjoyed = pleased = contented = satisfied = delighted",
+"infectious diseases = diseases that can pass from one plant to another by the wind or by insects",
+"in the natural world = throughout nature",
+"ignore = resist",
+"intuitive thinking = intuition",
+"illnesses = ailments",
+"information = data",
+"instructed = told",
+"insufficient = sparse",
+"illogical = unreasonable",
+"immoral = unethical",
+"important = crucial",
+"incompetent = inept",
+],
+/* 29: */ [
+"intense = extreme",
+"improve = increase the efficiency of",
+"increase in population = population growth",
+"industrial revolution = industrialisation",
+"immediately = nearly instant",
+"information = data",
+"imitate (imitation) = mimic",
+"impaired = damaged",
+"innocent = guiltless",
+"insufficient = inadequate = deficient",
+"in accordance with = according to",
+"inaccurate= incorrect",
+"intelligent = smart = bright",
+"increasing = soaring",
+"interior access = inner staircases",
+"initiate = bring about",
+"interesting = provocative = engrossing",
+"identify the problem = understand the problem",
+"isolated = inaccessible",
+"internal = inner = inside",
+"in excess of = over",
+],
+/* 30: */ [
+"increase = expand = rise",
+"irrelevant = inappropriate = unrelated",
+"irritate = annoy",
+"introduction = invention",
+"identical = alike = duplicate",
+"inactive = lazy",
+"ignore = disregard",
+"important = vital = indispensable",
+"interesting = fascinating = engaging = attractive = intriguing = captivating = enchanting",
+"impossible = unachievable",
+"infants = very young children",
+"intriguing = fascinating",
+"in essence = essentially",
+"independent = self-reliant",
+"inappropriate = unsuitable",
+"increase = enlarge = amplify",
+"ingenious = clever = creative",
+"impetuous = impulsive = reckless",
+"important = significant = meaningful",
+"inappropriate = unsuitable = wrong",
+],
+/* 31: */ [
+"ignorant = unaware",
+"immaculate = spotless = pure",
+"imperfect = defective = faulty",
+"imperative = compulsory = mandatory",
+"involved with = associated with",
+"idle = inactive",
+"immature = childish = inexperienced",
+"impolite = rude",
+"indefinite = unclear",
+"insignificant = unimportant",
+"immune = resistant",
+"impartial = neutral = unbiased = fair",
+"idea = thought = concept",
+"incident = event",
+"incompatible characteristics = paradox",
+"keep = save = protect =guard",
+"kind = considerate = tender = thoughtful",
+"kind = wonderful",
+"knowledgeable = smart",
+],
+/* 32: */ [
+"launched = initiated",
+"lived apart = be separated at birth",
+"large = big = massive = huge",
+"last = final = end",
+"look like = resemble",
+"levels = storeys",
+"lethargic = tired",
+"lifted = raised",
+"leave out = omit",
+"life expectancy = lifetime",
+"lower secondary schools = middle-years education",
+"least = fewest = minimum = smallest",
+"lacking = insufficient",
+"long-term = sustainable",
+"liable to = can happen",
+"less time spent on exercises = shorten the practice",
+"learn = acquire",
+"long = lengthy",
+"lure = attract = seduce",
+"long-lost traits = ancestral features",
+],
+/* 33: */ [
+"left = soared out of",
+"limit = minimize",
+"limited = incomplete",
+"local people = communities",
+"large city = megalopolis",
+"long-term = lasting/extending over a long time",
+"little doubt = almost certainly",
+"luxurious = extravagant = elegant",
+"lack = deficit",
+"love = like = fancy = cherish = adore = treasure = appreciate",
+"levels of unemployment = unemployment rate",
+],
+/* 34: */ [
+"motifs = patterns = images",
+"material = commodity",
+"magnify = expand = enlarge = exaggerate",
+"misfortune = hardship",
+"mathematical method = statistical concept",
+"moved = relocation",
+"most people = almost every individual",
+"manager = boss",
+"mass production = print out huge numbers",
+"mainly = most important",
+"mishandling = bungling",
+"make payment = pay for",
+"movement =transport",
+"mean = unkind = malicious = nasty",
+"mend = repair = fix",
+"motorised vehicles = buses and trucks",
+"more than = exceed",
+"make the noise stop = turn the noise off",
+"moulded = reshaped",
+"man-made = synthetic",
+],
+/* 35: */ [
+"mild = moderate",
+"moral = ethical = virtuous = righteous",
+"mature = adult",
+"most = maximum",
+"maximum = greatest",
+"minimum = least",
+"mobile = moveable",
+"monotonous = boring = tedious",
+"mysterious = secret",
+"manufactured = produced",
+"move onto = pass onto",
+"most of = nearly all of",
+"moves = gestures",
+"more = increased",
+"modified = qualified",
+"migrate back = return",
+"medical technique = treatment",
+"mean = cruel = inconsiderate",
+"movable = portable",
+"manufacture = produce",
+],
+/* 36: */ [
+"need = require",
+"non-fossil-based fuels = renewable energy",
+"needed = required",
+"nature = essence",
+"not traditional = new",
+"natural forests = primary forests",
+"not limit = transcend",
+"neat = clean, tidy, well-organized.",
+"new = fresh = original = current",
+"noisy = rowdy",
+"noise = disturbance",
+"normal = ordinary = typical, usual",
+"negligent = careless = inattentive",
+"naughty = bad = disobedient",
+"neat = clean = orderly = tidy",
+"neglectful = careless",
+"no limit = never reach maximum",
+"not charged = not have to pay",
+"new = recent",
+"nervous energy = psychic tension",
+"new technologies = modern technologies",
+"not natural = artificial",
+"not appreciated = undervalued",
+"now = current",
+"need = requirement",
+],
+/* 38: */ [
+"observe = see",
+"omit = strip out = leave out",
+"ordinary = conventional",
+"over the counter = in the shops",
+"officials = authorities",
+"overcome = deal with",
+"open = begin",
+"occur frequently = are common",
+"only = solely",
+"overdirect = too much guidance",
+"overcome shyness = learn to be more outgoing",
+"one explanation = another possibility",
+"ordinary = commonplace",
+"old = antique",
+"obsolete = dated = antiquated",
+"optimistic = hopeful = confident",
+"odours = smell",
+"overcome = getting rid of",
+"occur more than once = repeated",
+"outgoing = assured",
+"obey = comply",
+"old people = people who are retired",
+"offend = displease = disgust",
+"outstanding = extraordinary",
+"odd = weird = strange",
+"obey = comply",
+],
+/* 40: */ [
+"plant = grow",
+"place = locate",
+"paintings = works",
+"precious metals = gold, silver",
+"premature = early",
+"pretty = lovely = beautiful = attractive",
+"pleasing = appealing",
+"perform = carry out",
+"pioneered = first suggested",
+"persuasive = powerful",
+"play it safe = avoid risk",
+"personality = character",
+"potential = possibilities",
+"promptly = immediately",
+"profit = gain = earnings = benefit",
+"prohibit = forbid = restrict",
+"policy initiative = strategy",
+"previous events = past experience",
+"plants = stations",
+"provide a view of = overlook",
+],
+/* 41: */ [
+"private transport = car",
+"principles = laws",
+"put together = assembled",
+"place = deposit",
+"prompt = punctual = timely",
+"prosperous = thriving = successful = flourishing",
+"prevent = prohibit = hinder",
+"permit = allow",
+"prior to = beforehand",
+"pictures = images",
+"problem = difficulty",
+"permit = allow",
+"promotion = advancement",
+"prominent = distinguished = eminent",
+"personal values = individual properties",
+"pessimistic view = seems to be getting worse",
+"prevail upon = have influence in = persuade",
+"principles = essential features",
+"publicity = press",
+"program cost = program fee",
+"physical changes = hormonal changes",
+],
+/* 42: */ [
+"processes = stages",
+"perfect = flawless",
+"precious = valuable",
+"plausible = believable = reasonable = logical",
+"polite = gracious = courteous",
+"place = area = plot = region = location = situation",
+"proportion = percentage = rate",
+"poverty rate = level of poverty = poverty level = the percentage of people who live in poverty",
+"production = manufacture = be produced = be made = be manufactured",
+"per person = per capita",
+"people who use cars = car users = car commuters = people who commute by car = people who travel by car",
+"people who cycle to work = cycling commuters",
+"public = individuals",
+"produce accurate work = make fewer errors",
+"problems = difficulties",
+"present beliefs = contemporary perceptions",
+"picked out = chose",
+"pesticides = potent chemicals",
+"pagoda = temple building",
+"prehistoric = ancient",
+"patience = perseverance",
+"permanent = enduring = lasting",
+"prevent misunderstanding = resolve any confusion",
+"peace = harmony",
+"persuade = convince = influence",
+"peace = quiet",
+"preceding = previous",
+"quickly = rapidly",
+"question = interrogate = inquire = ask",
+"quiet = silent = tranquil",
+"quick = speedy",
+"quit = cease = stop = withdraw",
+],
+/* 45: */ [
+"rely on = be dependent on",
+"rules = laws",
+"restrict = curb",
+"really successful = achieve at a higher level",
+"rainfall = precipitation",
+"rotate = turn",
+"recording of events = documentation of history",
+"replication = reproducing",
+"regarded as =considered",
+"researchers with differing attitudes = sceptics and advocates",
+"remove = extract",
+"react = respond",
+"reason = caused",
+"remedy = repair",
+"rude = unfriendly",
+"replaced = upgrade",
+"rational thinking = judgment",
+"reversible = run backwards",
+"responsibility = moral obligation",
+"reticence = shyness",
+],
+/* 46: */ [
+"remains = fragments",
+"re-emerge = reappear",
+"respond = reply",
+"resemble = look like",
+"regular = continual",
+"referring to = talk about",
+"response = reply",
+"run their own business = open their own business/ company",
+"regulations = standards",
+"relies on = draw on",
+"reliable = predictable",
+"relationships with other people = social experience",
+"reflection = movements in the mirror",
+"reveal = tell",
+"recognize = distinguish",
+"remember = recall",
+"retain = learn",
+"raise = lift",
+"recognize = certify = admit officially (usually in writing)",
+"restricted = limited",
+"recognise the difference = distinguish",
+],
+/* 47: */ [
+"rise = growing = increased",
+"release = punctured",
+"recommence = continue",
+"real = authentic",
+"reluctant = unwilling = hesitant",
+"remote = secluded = isolated = distant",
+"rarely = seldom",
+"reduce = shrink",
+"remarkable = outstanding",
+"rough = harsh",
+"release = discharge",
+"rude = discourteous",
+"rich = wealthy",
+"risky = hazardous",
+"reputable = honorable",
+"resist = oppose = withstand",
+"recreation = amusement = pleasure",
+"reduce = lessen = decrease = diminish",
+"reliable = trustworthy",
+"reveal = show = disclose",
+"ridiculous = nonsensical = foolish",
+"remove = eliminate = get rid of",
+],
+/* 49: */ [
+"shut out water = seal off from water",
+"sea = ocean",
+"support = back up",
+"satisfying = rewarding",
+"suffers = experiences",
+"supplementary = extra",
+"silence = absence of a sound",
+"shade = shelter from the heat",
+"steps = measures",
+"strengthen = deepen",
+"share = interchange",
+"socially disadvantaged = deprived",
+"self-reliance = independence",
+"support = backup",
+"significance = importance",
+"show statistically = provide precise, valid or reliable data",
+"seem to contradict = sound paradoxical",
+"significant = important",
+"several times = on more than one occasion",
+"signals = radio waves",
+],
+/* 50: */ [
+"site = station",
+"seeking = looking for",
+"searching for = looking for",
+"stop = quit = cease = terminate",
+"strenuous = vigorous = laborious",
+"suitable = appropriate",
+"small = minor",
+"stop = halt",
+"sea life = fish and other creatures",
+"saw the importance = understood the need",
+"success rate = hit-rate",
+"surprising = unexpectedly",
+"similar to = not unusual",
+"severe weather conditions = typhoons",
+"stop = constrain",
+"send = deliver",
+"stop = close down = put a halt to = bring a halt to",
+"separate from = independent of",
+"staff = employees",
+"sleep disorders = sleep disturbance",
+"shy = timid",
+],
+/* 51: */[
+"separate = disconnect",
+"sparse = empty",
+"stable = steady = unchanging",
+"stimulate = motivate",
+"same = similar",
+"sharp = bright",
+"strict = severe",
+"strong = powerful = mighty",
+"stupid = dense = foolish",
+"smart = intelligent = clever",
+"sadness = depression",
+"scatter = disperse",
+"show = present = reveal = demonstrate = display = exhibit",
+"slow = gradual = leisurely",
+"selfish = stingy",
+"sad = unhappy",
+"subsequent = following = succeeding",
+"small = tiny",
+"sensible = rational",
+"separate = disconnect = detach",
+"small = little",
+],
+/* 52: */[
+"swift = fast = speedy = hasty",
+"synthetic = man-made = artificial",
+"sloppy = disorderly",
+"sick = ill",
+"slim = slender = thin",
+"small = little",
+"sociable = friendly",
+"successful = thriving = prosperous = triumphant",
+"surplus = excess = additional = extra",
+"strange = odd = weird, outlandish, curious, unique, exclusive, irregular",
+"sales = turnover = how much money is made = income = revenue",
+"spending = expenditure",
+"sort = classify",
+"start a business = own a business/ company",
+"shopping on the internet = online shopping = buying/purchasing online",
+"sales of fast food = turnover from fast food",
+],
+/* 53: */[
+"taken out = removed",
+"the folklore = the local belief",
+"the most important step = key step",
+"time limit = deadline",
+"trend of the period = fashion of the time",
+"tradesmen = merchants",
+"the rapid growth = the spectacular growth",
+"transport methods = transport modes",
+"technological developments = information technologies",
+"take gambles = take chances",
+"techniques = methods = practices",
+"transport mode = means of transport",
+"test = examination",
+"test = experiment",
+"to investigate = to analyse",
+"the most important = major",
+"to give up = to abandon",
+"2 decades = 20 years",
+"the most vividly coloured red = the reddest",
+"took = carried",
+],
+/* 54: */[
+"tools = facilities",
+"the question = the puzzle",
+"transmission = pass along communication channels",
+"transmitted = sent back",
+"transmit = sent out",
+"thin = skinny",
+"tragic = sorrowful",
+"take = receive",
+"terrible = awful = bad",
+"threat = endangered",
+"today = current",
+"today = now",
+"teaching activities = methods",
+"three different types= three separate ways",
+"to copy = to replicate = to reproduce",
+"the world economy = the global economy",
+"to be sure = to ensure",
+"to proceed = to continue",
+"total = whole = entire = complete",
+"tell = inform = notify",
+"take = pick = choose = select",
+"the level of income = the rate of income = the income rate = the income level = the level of revenue = the revenue rate = the revenue level",
+"the elderly = elderly people = senior citizens",
+"the amount of time spent = the time spent",
+"the majority of people = most of the people = most people",
+"transport = deliver = carry",
+"to rise = to increase = to grow = to go up",
+"to decrease = to fall = to reduce = to go down = to drop = to decline",
+],
+/* 56: */[
+"uncover = reveal",
+"underestimate = overlook",
+"universal = just about everybody",
+"unjust = unfair",
+"unemployment = out of work",
+"unlike = a fundamental difference",
+"unpredictably = erratically",
+"understand = recognize",
+"upset = find painful, distressing",
+"unnecessary = superfluous = redundant",
+"unpleasant = offensive",
+"uncommon = unusual",
+"unknown = not renowned",
+"unwanted material = waste",
+"upgrade = improve",
+"unsuccessful = fruitless",
+"unfit = unsuited",
+"unexpectedly = without warning = unpredictable",
+"unusual = exceptional",
+"uncertain = unsure",
+"unbiased = impartial = unprejudiced = fair",
+"unite = join",
+"unaware = unconscious",
+"unnecessary = optional",
+"unimportant = meaningless",
+"untruthful = insincere",
+"uninteresting = dull",
+"usual = ordinary",
+"unpleasant = unacceptable",
+],
+/* 58: */[
+"view = vision",
+"valuable = precious",
+"views = convictions",
+"views = attitudes",
+"vibrate = shake",
+"vacant = unoccupied = empty",
+"vague = unclear = indistinct = obscure",
+"vague = ambiguous",
+],
+/* 59: */[
+"world = international",
+"working together = coordination",
+"worldwide = international",
+"wider = greater",
+"water consumption = the amount of water consumed",
+"ways of learning = techniques for learning = approaches to learning",
+"waste = trash = rubbish",
+"well known = famous",
+"wholehearted = sincere",
+"wise = knowing = smart",
+"water is pumped = pumped with the water",
+"wild = stubborn",
+"weak = frail",
+"work = labor",
+"wasteful = extravagant",
+"wealth = prosperity = assets",
+"weary = tired = fatigued = lethargic",
+"wonderful = incredible = splendid = marvelous",
+"waste output = the amounts of waste",
+"work for an employer = work for other people· wrong = incorrect",
+"waste paper = paper that has been thrown away",
+"works of art = pieces",
+],
+[
+"alumnus (plural) or alumni (singular) = someone who was a student at a particular school, college, or university",
+"assignment = a specified task or amount of work assigned or undertaken as if assigned by authority",
+"attendance = the number of people present at an event, meeting, etc. the act of being present at a place; a record of how often a person goes to classes, meetings, etc.",
+"bachelor's (degree) = a four-year university degree (meaning it typically takes four years of full-time study to complete)",
+"boarding school = a private school where students are lodged and fed as well as taught",
+"bursaries = money given to pay for studies, usually provided on the basis of need",
+"campus = the area and buildings around a university, college, school, etc.",
+"certificate = a qualification for short academic programs Education.",
+"compulsory = required by a law or rule; having the power of forcing someone to do something",
+"cost of attendance = total amount it will cost you to go to school (includes tuition and fees as well as personal expenses).",
+"curricula (or curriculum) = the subjects comprising a course of study in a school or college.",
+"debate = a discussion between people in which they express different opinions about something",
+"degree = relatively long academic programs covering specific areas in great depth",
+"department = a section of a large organization such as a government, business, university, etc.",
+"diploma = a certificate of completion for high school, often required by jobs and colleges to be hired or accepted (it is lower than a degree)",
+"discipline = a field of study and its methods",
+"dissertation a long piece of writing about a particular subject that is done to earn an advanced degree at a university",
+"distance learning (or remote learning) = with this type of learning, students engage with learning materials at home or work (not at school). These materials are produced by the university, college or learning provider and are either sent directly to the student or more usually today accessed via the internet.",
+"entrance requirements = standards to be passed in order to enter a college or university. Colleges and universities require certain classes in high school and sometimes certain entrance exam scores to enter their school. These requirements vary depending on the institution.",
+"essay = a short piece of writing that tells a person's thoughts or opinions about a subject",
+"faculty = the teaching staff of a university or college, or of one of its departments or divisions",
+"fellowships = paid to students for work, such as teaching while studying for a Master's degree or conducting research while working towards a Doctorate of Philosophy degree (Ph.D.).",
+"full-time (student) = a student who is enrolled in 12 or more credit hours in a semester",
+"graduate a person who has a university degree",
+"grants = a sum of money given by a certain organization, especially the government, for a certain reason or cause",
+"higher Education = education, usually in a college or university, that is followed after high school or secondary school",
+"Inquisitive = tending to ask questions; having a desire to know or learn more asking too many questions about other people's lives",
+"laboratory = a workplace for the conduct of scientific research",
+"literacy = the ability to read and write; knowledge that relates to a specified subject",
+"master's (degree) = an advanced 2-year program completed after attainment of a bachelor's degree.",
+"MOOC = Massive Open Online Course. Internet-based course containing lectures and other course materials.",
+"nursery school / kindergarten = a school for children between the ages of about two and five (noun)",
+"online program (e-learning) = learning conducted via electronic media, typically on the Internet.",
+"part-time (student) = a student who is enrolled in less than 12 credit hours in a semester",
+"peer = a person who belongs to the same age group or social group as someone else",
+"postgraduate = a person who already holds a first degree and who is doing advanced study or research",
+"pupil = a person who is being taught, especially a child in a school",
+"scholarship = a form of financial aid that does not need to be repaid; usually awarded on the basis of academic, athletic or other achievements",
+"secondary Education = literally, the period after primary education (elementary or grade school) and before tertiary education (college). It usually occurs from about age 12 to 18.",
+"semester = one of the two periods that the school or college year is divided into",
+"seminar = A class or a conference held to discuss ideas on a topic",
+"standardized tests = tests that measure students' performance compared to that of thousands of other students",
+"thesis = a long piece of writing on a particular subject that is done to earn a degree at a university",
+"To attend (classes) = To go to or be present at some event",
+"to broaden horizons = to enlarge / expand someone's scope",
+"to deliver a lecture = to carry out/conduct a lecture",
+"to demonstrate academic gains = to show academic progress/education achievement",
+"to enroll (in a degree course) = to enter (someone) as a member of or participant in something; to take (someone) as a member or participant; to become a member or participant",
+"to evaluate = to determine or fix the value of something; to determine the significance, worth, or condition of usually by careful appraisal and study",
+"to fall behind (with studies) = to lag behind",
+"to graduate (from a university) to earn a degree or diploma from a school, college, or university",
+"to keep up with (your studies) = to go or make progress at the same rate as others",
+"to major in a subject = to pursue an academic major",
+"to procrastinate = to put off intentionally the doing of something that should be done",
+"top-tier institutions = leading or prestigious educational institutions",
+"to research = to study (something) carefully; to collect information about or for (something)",
+"to review = to look at or examine (something) carefully especially before making a decision or judgment; to study or look at (something) again; to describe or show (a series of things or events from the past)",
+"to revise = to make changes especially to correct or improve (something); to study (something) again",
+"trimester / term = a period of three months; one of three periods into which a school year is sometimes divided",
+"truant = absent without permission; student who stays away from school without leave or explanation61",
+"undergraduate = a student in a college or university who has not yet earned a bachelor's degree",
+"workshop (training) = A small group led by a facilitator or trainer",
+],
+]
+
+let containerBetlar = document.getElementById("containerBetlar")
+let hisobSaxifasi = document.getElementById("hisobSaxifasi")
+let testArea = document.getElementById("testArea")
+
+let testBeti=0
+let testAttempt=0
+let testRight=0
+let hisobsoni = 0
+
+function bet(abs){
+    testBeti = abs
+    testAttempt=0
+    testRight=0
+    hisob()
+    saxifa(3)
+    test()
+}
+
+function hisob(){
+    hisobsoni++
+    hisobSaxifasi.innerHTML+=`
+    <div class="test" id="a${hisobsoni}">
+        <div class="bet">bet: ${testBeti}</div>
+        <div class="atempts">urinishlar: ${testAttempt}</div>
+        <div class="right">to'g'rilari: ${testRight}</div>
+    </div>
+    `
+}
+
+let hozirgiLugatlar;
+let hozirgiSuz;
+let suzSavol;
+let suzJavob;
+let suzJavobN1;
+let suzJavobN2;
+let h1;
+let ham = betSuzlari[48]
+
+for (let index = 0; index < ham.length-1; index++){
+    h1=ham[index]
+    for(x=0; x < h1.length-1; x++){
+        if(h1[x]=="="){/* 
+            suzSavol = hozirgiSuz.slice(0, x-1)
+            suzJavob = hozirgiSuz.slice(x+1, hozirgiSuz.length) */
+            console.log(h1.slice(0, x-1));
+            break
+        }
+    }
+}
+
+function test(){
+
+    hozirgiLugatlar = betSuzlari[testBeti-1]
+    let num = Math.floor(Math.random() * (hozirgiLugatlar.length))
+    hozirgiSuz = hozirgiLugatlar[num]
+    for(x=0; x<hozirgiSuz.length; x++){
+        if(hozirgiSuz[x]=="="){
+            suzSavol = hozirgiSuz.slice(0, x-1)
+            suzJavob = hozirgiSuz.slice(x+1, hozirgiSuz.length)
+            break
+        }
+    }
+
+    let num1 = Math.floor(Math.random() * (hozirgiLugatlar.length))
+    for (i = 0; i < 1; i++) {
+        if(num1!=num){
+            hozirgiSuz=hozirgiLugatlar[num1]
+            break
+        }
+        else{
+            num1 = Math.floor(Math.random() * (hozirgiLugatlar.length))
+            i--
+        }
+    }
+    for(x=0; x<hozirgiSuz.length; x++){
+        if(hozirgiSuz[x]=="="){
+            suzJavobN1 = hozirgiSuz.slice(x+1, hozirgiSuz.length)
+            break
+        }
+    }
+
+    let num2 = Math.floor(Math.random() * (hozirgiLugatlar.length))
+    for (i = 0; i < 1; i++) {
+        if(num2!=num && num2!=num1){
+            hozirgiSuz=hozirgiLugatlar[num2]
+            break
+        }
+        else{
+            num2 = Math.floor(Math.random() * (hozirgiLugatlar.length))
+            i--
+        }
+    }   
+    for(x=0; x<hozirgiSuz.length; x++){
+        if(hozirgiSuz[x]=="="){
+            suzJavobN2 = hozirgiSuz.slice(x+1, hozirgiSuz.length)
+            break
+        }
+    }
+    testAreaCreator()
+}
+
+let tartib1;
+
+function testAreaCreator(){
+    
+    let a;
+    let b;
+    let c;
+    
+    tartib1 = Math.floor(Math.random() * (3))+1
+
+    if(tartib1==1){
+        a=suzJavob
+        b=suzJavobN1
+        c=suzJavobN2
+    }
+    else if(tartib1==2){
+        a=suzJavobN1
+        b=suzJavob
+        c=suzJavobN2
+    }
+    else if(tartib1==3){
+        a=suzJavobN2
+        b=suzJavobN1
+        c=suzJavob
+    }
+
+    testArea.innerHTML = `
+    <div class="containerQuestion">
+        <div class="question">${suzSavol}</div>
+
+        <div class="varient" id="varient">
+            <div class="vari" onclick="vari(1)">A) ${a}</div>
+            <div class="vari" onclick="vari(2)">B) ${b}</div>
+            <div class="vari" onclick="vari(3)">C) ${c}</div>
+        </div>
+        <div class="natijalar">
+            urunish: ${testAttempt}
+            <br>
+            to'g'ri: ${testRight}
+        </div>
+    </div>
+    `
+}
+
+function vari(a){
+    if(a==tartib1){
+        testRight++
+    }
+    else{
+        alert("So'ralgan so'z: " + suzSavol + " .  to'g'risi: " + suzJavob)
+    }
+    testAttempt++
+
+    let x = "a"+hisobsoni
+
+    let v = document.getElementById(x)
+
+    v.innerHTML=`
+        <div class="bet">bet: ${testBeti}</div>
+        <div class="atempts">urinishlar: ${testAttempt}</div>
+        <div class="right">to'g'rilari: ${testRight}</div>
+    `
+
+    test()
+}
+
+function saxifa(a){
+    if(a==1){
+        containerBetlar.style.display = "block"
+        hisobSaxifasi.style.display = "none"
+        testArea.style.display = "none"
+    }
+    if(a==2){
+        containerBetlar.style.display = "none"
+        hisobSaxifasi.style.display = "block"
+        testArea.style.display = "none"
+    }
+    if(a==3){
+        containerBetlar.style.display = "none"
+        hisobSaxifasi.style.display = "none"
+        testArea.style.display = "block"
+    }
+}
+    
+    </script>
+</body>
+</html>
